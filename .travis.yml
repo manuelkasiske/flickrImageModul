@@ -20,7 +20,8 @@ before_script:
   - git pull
 
 script:
-  - if [ "`git log -n 1 | grep Author`" != "Author: Travis-CI <noreply@travis-ci.org>" ]; then mvn -B clean release:clean release:prepare release:perform; fi;
+  - command=`git log -n 1 | grep Author`
+  - if [ "$command" != "Author: Travis-CI <noreply@travis-ci.org>" ]; then mvn -B clean release:clean release:prepare release:perform; fi;
 
 branches:
   only:
