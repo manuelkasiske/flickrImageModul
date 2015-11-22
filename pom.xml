@@ -31,8 +31,15 @@
             <version>1.7.1</version>
         </dependency>
 
-
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>bintray</id>
+            <url>https://api.bintray.com/maven/manuelkasiske/maven/flickrImageModul</url>
+        </repository>
+    </distributionManagement>
+
 
 
 </project>
