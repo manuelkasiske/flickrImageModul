@@ -11,6 +11,7 @@ before_script:
   - ssh-add .travisdeploykey
   - git config user.name "Travis-CI"
   - git config user.email "noreply@travis-ci.org"
+  - git checkout master
 
 script:
   - mvn -B clean release:clean release:prepare release:perform
