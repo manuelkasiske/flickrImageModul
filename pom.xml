@@ -4,7 +4,7 @@
 
     <groupId>flickrImageModul</groupId>
     <artifactId>flickrImageModul</artifactId>
-    <version>1.14-SNAPSHOT</version>
+    <version>1.15-SNAPSHOT</version>
 
     <scm>
         <connection>scm:git:https://github.com/manuelkasiske/flickrImageModul.git</connection>
