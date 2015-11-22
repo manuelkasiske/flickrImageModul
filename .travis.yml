@@ -3,7 +3,9 @@ jdk:
   - oraclejdk8
 
 #script: mvn clean javadoc:jar source:jar package install deploy --settings travis-settings.xml
-script: mvn -B release:clean release:prepare --settings travis-settings.xml
+
+after_success:
+  - mvn clean javadoc:jar source:jar package install deploy --settings travis-settings.xml
 
 branches:
   only:
