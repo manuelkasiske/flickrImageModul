@@ -21,7 +21,7 @@ before_script:
 
 script:
   - chmod 777 deploy.sh
-  - deploy.sh
+  - ./deploy.sh
 
 branches:
   only:
