@@ -2,5 +2,6 @@ language: java
 jdk:
   - oraclejdk8
 
-script: mvn clean javadoc:jar source:jar package install deploy --settings travis-settings.xml
+# script: mvn clean javadoc:jar source:jar package install deploy --settings travis-settings.xml
+script: mvn release:clean release:prepare release:perform --settings travis-settings.xml
 
