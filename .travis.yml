@@ -11,10 +11,16 @@ before_script:
   - ssh-add .travisdeploykey
   - git config user.name "Travis-CI"
   - git config user.email "noreply@travis-ci.org"
+  - echo ".travisdeploykey" >> .git/info/exclude
+  - echo "pom.xml.releaseBackup" >> .git/info/exclude
+  - echo "release.properties" >> .git/info/exclude
+  - echo "target/" >> .git/info/exclude
+  - git fetch -p	
   - git checkout master
+  - git pull
 
 script:
-  - mvn -B clean release:clean release:prepare release:perform
+  - if [ "`git log -n 1 | grep Author`" != "Author: Travis-CI <noreply@travis-ci.org>" ]; then mvn -B clean release:clean release:prepare release:perform; fi;
 
 branches:
   only:
