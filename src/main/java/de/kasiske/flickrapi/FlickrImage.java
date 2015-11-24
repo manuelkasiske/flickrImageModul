@@ -40,8 +40,8 @@ public class FlickrImage {
     }
 
     public String getContent() {
-        return author + " " + title + " " + description;
-        //return author + " " + title;
+        //return author + " " + title + " " + description;
+        return author + " " + title;
     }
 
     @Override
