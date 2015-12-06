@@ -1,2 +1,2 @@
 # Flickr API Module
-This module is using flickr rss feed
+This module is using flickr rss feed.
