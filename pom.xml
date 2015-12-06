@@ -4,13 +4,13 @@
 
     <groupId>flickrImageModul</groupId>
     <artifactId>flickrImageModul</artifactId>
-    <version>1.25-SNAPSHOT</version>
+    <version>1.25</version>
 
     <scm>
         <connection>scm:git:https://github.com/manuelkasiske/flickrImageModul.git</connection>
         <developerConnection>scm:git:git@github.com:manuelkasiske/flickrImageModul.git</developerConnection>
         <url>https://github.com/manuelkasiske/flickrImageModul</url>
-        <tag>flickrImageModul-1.14</tag>
+        <tag>flickrImageModul-1.25</tag>
     </scm>
 
     <profiles>
