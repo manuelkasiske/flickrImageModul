@@ -1,17 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
+    <name>Flickr Image Modul</name>
     <groupId>flickrImageModul</groupId>
     <artifactId>flickrImageModul</artifactId>
     <version>1.30-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-    <scm>
-        <connection>scm:git:https://github.com/manuelkasiske/flickrImageModul.git</connection>
-        <developerConnection>scm:git:git@github.com:manuelkasiske/flickrImageModul.git</developerConnection>
-        <url>https://github.com/manuelkasiske/flickrImageModul</url>
-        <tag>flickrImageModul-1.14</tag>
-    </scm>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>bintray</name>
+            <url>http://jcenter.bintray.com/</url>
+        </repository>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-manuelkasiske-maven</id>
+            <name>bintray</name>
+            <url>http://dl.bintray.com/manuelkasiske/maven</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-manuelkasiske-maven</id>
+            <name>bintray-plugins</name>
+            <url>http://dl.bintray.com/manuelkasiske/maven</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.2</version>
+                <configuration>
+                    <useReleaseProfile>true</useReleaseProfile>
+                    <releaseProfiles>release</releaseProfiles>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <reporting>
+        <outputDirectory>${project.build.directory}/site</outputDirectory>
+    </reporting>
 
     <profiles>
         <profile>
@@ -52,37 +100,12 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
     <developers>
         <developer>
             <name>Manuel Kasiske</name>
         </developer>
     </developers>
-
-    <repositories>
-        <repository>
-            <id>central</id>
-            <name>bintray</name>
-            <url>http://jcenter.bintray.com/</url>
-        </repository>
-        <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>bintray-manuelkasiske-maven</id>
-            <name>bintray</name>
-            <url>http://dl.bintray.com/manuelkasiske/maven</url>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>bintray-manuelkasiske-maven</id>
-            <name>bintray-plugins</name>
-            <url>http://dl.bintray.com/manuelkasiske/maven</url>
-        </pluginRepository>
-    </pluginRepositories>
 
     <dependencies>
         <dependency>
@@ -109,28 +132,12 @@
 
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.2</version>
-                <configuration>
-                    <useReleaseProfile>true</useReleaseProfile>
-                    <releaseProfiles>release</releaseProfiles>
-                    <autoVersionSubmodules>true</autoVersionSubmodules>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <scm>
+        <connection>scm:git:https://github.com/manuelkasiske/flickrImageModul.git</connection>
+        <developerConnection>scm:git:git@github.com:manuelkasiske/flickrImageModul.git</developerConnection>
+        <url>https://github.com/manuelkasiske/flickrImageModul</url>
+        <tag>flickrImageModul-1.14</tag>
+    </scm>
 
     <distributionManagement>
         <repository>
