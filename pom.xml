@@ -4,7 +4,7 @@
     <name>Flickr Image Modul</name>
     <groupId>flickrImageModul</groupId>
     <artifactId>flickrImageModul</artifactId>
-    <version>1.30</version>
+    <version>1.31-SNAPSHOT</version>
     <packaging>jar</packaging>
 
 
@@ -136,7 +136,7 @@
         <connection>scm:git:https://github.com/manuelkasiske/flickrImageModul.git</connection>
         <developerConnection>scm:git:git@github.com:manuelkasiske/flickrImageModul.git</developerConnection>
         <url>https://github.com/manuelkasiske/flickrImageModul</url>
-        <tag>flickrImageModul-1.30</tag>
+        <tag>flickrImageModul-1.14</tag>
     </scm>
 
     <distributionManagement>
