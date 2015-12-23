@@ -1,0 +1,8 @@
+Maven: com.google.code.gson:gson:1.7.1
+Maven: commons-codec:commons-codec:1.9
+Maven: commons-logging:commons-logging:1.2
+Maven: junit:junit:4.9
+Maven: org.apache.httpcomponents:httpclient:4.5.1
+Maven: org.apache.httpcomponents:httpcore:4.4.3
+Maven: org.hamcrest:hamcrest-core:1.1
+Maven: org.mockito:mockito-all:1.9.5
