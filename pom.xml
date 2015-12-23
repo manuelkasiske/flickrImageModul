@@ -7,6 +7,23 @@
     <version>1.31-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <ciManagement>
+        <system>Travis-CI</system>
+        <url>https://travis-ci.org/manuelkasiske/flickrImageModul</url>
+        <notifiers>
+            <notifier>
+                <address>manuel.kasiske@gmx.de</address>
+            </notifier>
+        </notifiers>
+    </ciManagement>
+
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>https://raw.githubusercontent.com/manuelkasiske/flickrImageModul/master/LICENSE.txt</url>
+            <distribution>https://bintray.com/manuelkasiske/maven/flickrImageModul/</distribution>
+        </license>
+    </licenses>
 
     <repositories>
         <repository>
@@ -103,7 +120,9 @@
 
     <developers>
         <developer>
+            <id>1</id>
             <name>Manuel Kasiske</name>
+            <email>manuel.kasiske@gmx.de</email>
         </developer>
     </developers>
 
